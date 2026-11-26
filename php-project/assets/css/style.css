@@ -1,0 +1,84 @@
+:root {
+  --ag-bg: #f8fafc;
+  --ag-surface: #ffffff;
+  --ag-border: #e2e8f0;
+  --ag-ink: #0f172a;
+  --ag-muted: #475569;
+  --ag-accent: #065f46;
+  --ag-accent-hover: #047857;
+}
+
+body {
+  font-family: 'Hind Siliguri', 'Plus Jakarta Sans', system-ui, sans-serif;
+  background-color: var(--ag-bg);
+  color: var(--ag-ink);
+}
+
+.ag-navbar {
+  background: var(--ag-surface);
+  border-bottom: 1px solid var(--ag-border);
+}
+
+.ag-card {
+  background: var(--ag-surface);
+  border: 1px solid var(--ag-border);
+  border-radius: 12px;
+}
+
+.ag-btn-primary {
+  background-color: var(--ag-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.1rem;
+  font-weight: 600;
+  transition: background-color 150ms ease;
+}
+
+.ag-btn-primary:hover {
+  background-color: var(--ag-accent-hover);
+  color: #ffffff;
+}
+
+.ag-hero-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.ag-meta {
+  font-size: 0.85rem;
+  color: var(--ag-muted);
+}
+
+.ag-admin-sidebar {
+  min-height: 100vh;
+  background-color: #0f172a;
+  color: #e2e8f0;
+}
+
+.ag-admin-sidebar a {
+  color: #cbd5e1;
+  text-decoration: none;
+  display: block;
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 0.25rem;
+}
+
+.ag-admin-sidebar a:hover,
+.ag-admin-sidebar a.active {
+  background-color: #1e293b;
+  color: #ffffff;
+}
+
+.ag-stat-card {
+  transition: border-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.ag-stat-card:hover {
+  border-color: var(--ag-accent);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  transform: translateY(-1px);
+}

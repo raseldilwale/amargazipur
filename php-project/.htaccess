@@ -1,0 +1,26 @@
+# AmarGazipur - Apache & LiteSpeed cPanel Configuration
+Options -Indexes
+ServerSignature Off
+DirectoryIndex index.php index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Block direct access to sensitive directories and files
+    RewriteRule ^(app|config|database|storage|docs)/ - [F,L]
+    RewriteRule \.(sql|log|md|lock|ini|env)$ - [F,L]
+
+    # Allow existing static assets
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Route everything else through Front Controller
+    RewriteRule ^ index.php [QSA,L]
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>

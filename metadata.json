@@ -1,0 +1,6 @@
+{
+  "name": "AmarGazipur",
+  "description": "গাজীপুর জেলার পূর্ণাঙ্গ ডিজিটাল কমিউনিটি প্ল্যাটফর্ম — স্থানীয় সংবাদ, কমিউনিটি ফোরাম, মার্কেটপ্লেস, বাসা ভাড়া, শিক্ষা ও রক্তদাতা ডিরেক্টরি।",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
